@@ -11,8 +11,8 @@ export const fetcher = (url: string, method?: HTTPMethods, additionalHeaders = {
         headers: {
             'Content-Type': 'application/json',
             // Fetch token through localstorage or cookie.
-            // Authorization: `Bearer ${getToken()}`
-            Authorization: `Bearer ${accessToken}`,
+            Authorization: `Bearer ${getToken()}`,
+            // Authorization: `Bearer ${accessToken}`,
             ...additionalHeaders
         }
     }).then((res) => {

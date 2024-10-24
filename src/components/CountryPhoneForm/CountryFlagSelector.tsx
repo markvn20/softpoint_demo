@@ -37,7 +37,9 @@ const CountryFlagSelector = ({ setCountry }: ICountryFlagSelector) => {
   });
 
   return (
-    <div style={{ padding: "0px 16px", border: "1px solid #ccc" }}>
+    <div
+      style={{ padding: "0px 16px", border: "1px solid #ccc", borderRadius: 6 }}
+    >
       <div style={{ position: "relative" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <button style={{ padding: 0 }} onClick={togglePopup} type="button">

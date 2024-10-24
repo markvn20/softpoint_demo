@@ -25,9 +25,10 @@ const CountryPhoneForm = ({ handleSubmit, isLoading }: ICountryPhoneForm) => {
       <form
         style={{ marginBottom: 16 }}
         onSubmit={(e) => {
+          let converted = String(phoneNumber).replace(/\D/g, "");
           e.preventDefault();
           handleSubmit({
-            phone_number: phoneNumber?.replace(/\D/g, ""),
+            phone_number: Number(converted),
             country_id: country?.id,
           });
         }}
